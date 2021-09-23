@@ -137,3 +137,99 @@ print(x is y) # Prints out False
 print(not False) # Prints out True
 print((not False) == (False)) # Prints out False
 
+#loops
+#for loop
+primes = [2, 3, 5, 7]
+for prime in primes:
+    print(prime)
+#while loop
+count = 0
+while count < 5:
+    print(count)
+    count += 1  # This is the same as count = count + 1
+
+#"break" and "continue" statements
+while True:
+    print(count)
+    count += 1
+    if count >= 5:
+        break
+
+# Prints out only odd numbers - 1,3,5,7,9
+for x in range(10):
+    # Check if x is even
+    if x % 2 == 0:
+        continue
+    print(x)
+
+#you can use else in for/while loops
+while(count<5):
+    print(count)
+    count +=1
+else:
+    print("count value reached %d" %(count))
+
+# Prints out 1,2,3,4
+for i in range(1, 10):
+    if(i%5==0):
+        break
+    print(i)
+else:
+    print("this is not printed because for loop is terminated because of break but not due to fail in condition")
+
+#functions
+def my_function(arg1, arg2):
+    print(arg1+arg2)
+    return arg1
+#call a function like this
+
+
+my_function(1,2)
+
+#Classes and Objects
+#Objects are an encapsulation of variables and functions into a single entity.
+class MyClass:
+    variable = "blah"
+
+    def function(self):
+        print("This is a message inside the class.")
+#access like this:
+
+myobjectx = MyClass()
+myobjectx.variable
+
+myobjectx.function()
+
+#A dictionary is a data type similar to arrays, but works with keys and values instead of indexes.
+# #Each value stored in a dictionary can be accessed using a key, which is any type of object (a string, a number, a list, etc.)
+# #instead of using its index to address it.
+phonebook = {}
+phonebook["John"] = 938477566
+phonebook["Jack"] = 938377264
+phonebook["Jill"] = 947662781
+print(phonebook)
+
+#to go through a dictionary, since there isn't an index, do this:
+phonebook = {"John" : 938477566,"Jack" : 938377264,"Jill" : 947662781}
+for name, number in phonebook.items():
+    print("Phone number of %s is %d" % (name, number))
+
+#removing a value from a dictionary
+phonebook = {
+   "John" : 938477566,
+   "Jack" : 938377264,
+   "Jill" : 947662781
+}
+del phonebook["John"]
+print(phonebook)
+
+#Modules and Packages
+# import the draw module
+import draw
+
+#Importing module objects to the current namespace
+from draw import draw_game
+
+#Importing all objects from a module
+from draw import *
+
